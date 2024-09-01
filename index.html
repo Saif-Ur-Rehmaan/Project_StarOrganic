@@ -5,118 +5,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Star Organic</title>
-    <!-- css -->
-    <link rel="stylesheet" href="assets/Libs/bootstrap/dist/css/bootstrap.css">
     <link rel="shortcut icon" href="assets/images/FavIcon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/Libs/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/index.css">
 </head>
 
-<body class="bg-light ">
-    <!-- Nav -->
-    <div class="container-fluid  ">
-        <div class="row justify-content-center position-relative">
-            <!-- TopBar -->
-            <div class="col-11 py-2  border-bottom border-2 col-sm-11 col-lg-10 ">
-                <div
-                    class="row align-items-center justify-content-md-center justify-content-between  flex-md-nowrap  gap-3 gap-xxl-5 py-3">
-                    <!-- Logo -->
-                    <div class="col-auto col-md-auto col-lg-3 col-xl-auto text-md-end text-center p-sm-0   ">
-                        <a href="index.html"
-                            class="w-auto h-auto LogoText px-2 d-flex align-items-center justify-content-center flex-nowrap">
-                            <span class="text-success fs-2">Star</span><span class="text-dark fs-3">Organic</span>
+<body>
 
-                        </a>
-                    </div>
-                    <!-- SearchBar -->
-                    <div class="col col-xxl-6 d-none d-md-block border border-1 shadow  bg-light rounded-pill">
-                        <div class="row position-relative h-100 align-items-center gap-1 px-2 py-1">
-                            <!-- logo -->
-                            <div class="col-auto ">
-                                <img src="assets/images/icons/Magnifiyer.svg" class="img-fluid" alt="">
-                            </div>
-                            <!-- Search Bar  -->
-                            <div class="col p-0">
-                                <input type="text" autocomplete="off" class="w-100 h-100 bg-transparent border-0 py-1"
-                                    id="SearchBar" placeholder="Search..." name="">
-                            </div>
-                            <div class="col-auto h-100" id="CancelButton" style="display: none;cursor: pointer;">X</div>
-                            <ul class="col-12 list-unstyled py-2  bg-light position-absolute rounded-3 shadow p-0 overflow-hidden mt-2"
-                                id="Suggessions">
-                                <li class="d-flex gap-2  opacity-75 py-2 px-3 fw-bolder suggession">
-                                    <img src="assets/images/icons/Magnifiyer.svg" alt="">
-                                    <span>pineapple</span>
-                                </li>
-                                <li class="d-flex gap-2  opacity-75 py-2 px-3 fw-bolder suggession">
-                                    <img src="assets/images/icons/Magnifiyer.svg" alt="">
-                                    <span>apple</span>
-                                </li>
-                                <li class="d-flex gap-2  opacity-75 py-2 px-3 fw-bolder suggession">
-                                    <img src="assets/images/icons/Magnifiyer.svg" alt="">
-                                    <span>grapes</span>
-                                </li>
-                                <li class="d-flex gap-2  opacity-75 py-2 px-3 fw-bolder suggession">
-                                    <img src="assets/images/icons/Magnifiyer.svg" alt="">
-                                    <span>Skin Care</span>
-                                </li>
-                                <li class="d-flex gap-2  opacity-75 py-2 px-3 fw-bolder suggession">
-                                    <img src="assets/images/icons/Magnifiyer.svg" alt="">
-                                    <span>Banana</span>
-                                </li>
-                            </ul>
+    <header>
+        <!-- nav -->
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <!-- container -->
+                <div class="col-10 border-bottom p-0">
+                    <!-- nav -->
+                    <div
+                        class="row w-100 flex-row justify-content-between justify-content-xl-center align-items-center gap-xl-3 gap-0 py-3">
+                        <!-- Logo -->
+                        <div class="col-auto">
+                            <span style="font-size: var(--fs42);color: var(--Color_1);">Star</span><span
+                                style="font-size: var(--fs29);">Organic</span>
                         </div>
-                        <!-- searchbar script -->
-                        <script>
-                            const SearchBar = document.getElementById("SearchBar");
-                            const Suggessions = document.getElementById("Suggessions");
-                            const CancelButton = document.getElementById("CancelButton");
-
-                            SearchBar.addEventListener("focus", () => {
-                                Suggessions.style.display = "block";
-                            })
-                            SearchBar.addEventListener("focusout", () => {
-                                Suggessions.style.display = "none";
-                            })
-                            SearchBar.addEventListener("input", () => {
-                                if (SearchBar.value == "") {
-                                    CancelButton.style.display = "none"
-                                } else {
-                                    CancelButton.style.display = "block"
-
-                                }
-                            })
-                            CancelButton.addEventListener("click", () => {
-                                SearchBar.value = "";
-                                CancelButton.style.display = "none";
-                            })
-                        </script>
-
-                    </div>
-                    <!-- login signup and hamburger buttons -->
-                    <div class="col-md-auto col-auto">
-                        <div class="row justify-content-between align-items-center gap-1">
-                            <!-- sign signup buttons -->
-                            <div class="col-auto d-none d-md-block text-nowrap ">
-                                <!-- signin button -->
-                                <div class=" btn px-0 text-success   HoverEffect-1 fw-bold fs-5">Sign up</div>
-
-                                <!-- signup button -->
-                                <div class="btn px-0  text-dark px-1 fw-bold fs-5">||</div>
-                                <div class="btn px-0  text-dark HoverEffect-1 fw-bold fs-5"> Sign in</div>
+                        <!-- Search Bar -->
+                        <div class="col d-none d-lg-block  border border-1 shadow  bg-light rounded-pill">
+                            <div class="row position-relative h-100 align-items-center gap-1 px-2 py-1">
+                                <!-- logo -->
+                                <div class="col-auto ">
+                                    <img src="assets/images/icons/Magnifiyer.svg" class="img-fluid" alt="">
+                                </div>
+                                <!-- Search Bar  -->
+                                <div class="col p-0">
+                                    <input type="text" autocomplete="off"
+                                        class="w-100 h-100 bg-transparent border-0 py-1" id="SearchBar"
+                                        placeholder="Search..." name="">
+                                </div>
+                                <div class="col-auto h-100" id="CancelButton" style="display: none;cursor: pointer;">X
+                                </div>
+                                <ul class="col-12 list-unstyled py-2  bg-light position-absolute rounded-3 shadow p-0 overflow-hidden mt-2"
+                                    id="Suggessions">
+                                    <li class="d-flex gap-2  opacity-75 py-2 px-3 fw-bolder suggession">
+                                        <img src="assets/images/icons/Magnifiyer.svg" alt="">
+                                        <span>pineapple</span>
+                                    </li>
+                                    <li class="d-flex gap-2  opacity-75 py-2 px-3 fw-bolder suggession">
+                                        <img src="assets/images/icons/Magnifiyer.svg" alt="">
+                                        <span>apple</span>
+                                    </li>
+                                    <li class="d-flex gap-2  opacity-75 py-2 px-3 fw-bolder suggession">
+                                        <img src="assets/images/icons/Magnifiyer.svg" alt="">
+                                        <span>grapes</span>
+                                    </li>
+                                    <li class="d-flex gap-2  opacity-75 py-2 px-3 fw-bolder suggession">
+                                        <img src="assets/images/icons/Magnifiyer.svg" alt="">
+                                        <span>Skin Care</span>
+                                    </li>
+                                    <li class="d-flex gap-2  opacity-75 py-2 px-3 fw-bolder suggession">
+                                        <img src="assets/images/icons/Magnifiyer.svg" alt="">
+                                        <span>Banana</span>
+                                    </li>
+                                </ul>
                             </div>
-                            <!-- hamburger button -->
-                            <div class="col-auto py-1 ">
-                                <img src="assets/images/icons/hamburger.svg" style="max-width:40px;  cursor: pointer;"
-                                    alt="">
+                            <!-- searchbar script -->
+                            <script>
+                                const SearchBar = document.getElementById("SearchBar");
+                                const Suggessions = document.getElementById("Suggessions");
+                                const CancelButton = document.getElementById("CancelButton");
 
-                            </div>
+                                SearchBar.addEventListener("focus", () => {
+                                    Suggessions.style.display = "block";
+                                })
+                                SearchBar.addEventListener("focusout", () => {
+                                    Suggessions.style.display = "none";
+                                })
+                                SearchBar.addEventListener("input", () => {
+                                    if (SearchBar.value == "") {
+                                        CancelButton.style.display = "none"
+                                    } else {
+                                        CancelButton.style.display = "block"
+
+                                    }
+                                })
+                                CancelButton.addEventListener("click", () => {
+                                    SearchBar.value = "";
+                                    CancelButton.style.display = "none";
+                                })
+                            </script>
+
+                        </div>
+
+                        <!-- Sign in / Sign up -->
+                        <div class="col-auto d-none d-lg-block ">
+                            <span><a href="" style="all: unset; font-size: var(--fs24); color: var(--Color_1); ">Sign
+                                    in</a></span>
+                            <span><a href="" style="all: unset; font-size: var(--fs24);">|| Sign up</a></span>
+                        </div>
+                        <!-- Hamburger -->
+                        <div class="col-auto p-0">
+                            <img src="assets/images/icons/hamburger.svg" width="48" alt="">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+
+    </header>
     <!-- Categories -->
-    <div class="container ">
+    <section class="container-fluid container-lg ">
         <div class="row px-3 justify-content-center gap-2 align-items-center flex-nowrap">
             <!-- Previous Btn -->
             <div class="col-auto px-0 d-none d-sm-block">
@@ -129,25 +123,39 @@
             </div>
 
             <!-- categories -->
-            <div class="col col-sm-10  py-3 " style="overflow-x: scroll;overflow-y: hidden;" id="CategoryContainer">
-                <div class="row flex-nowrap justify-content-center text-green   flex-row" style="width: max-content;">
-                    <div class="col-auto">Apple <img src="assets/images/icons/down-arrow.svg" width="16" alt=""></div>
-                    <div class="col-auto">Banana <img src="assets/images/icons/down-arrow.svg" width="16" alt=""></div>
-                    <div class="col-auto">Grapes <img src="assets/images/icons/down-arrow.svg" width="16" alt=""></div>
-                    <div class="col-auto">Apple <img src="assets/images/icons/down-arrow.svg" width="16" alt=""></div>
-                    <div class="col-auto">Banana <img src="assets/images/icons/down-arrow.svg" width="16" alt=""></div>
-                    <div class="col-auto">Grapes <img src="assets/images/icons/down-arrow.svg" width="16" alt=""></div>
-                    <div class="col-auto">Apple <img src="assets/images/icons/down-arrow.svg" width="16" alt=""></div>
-                    <div class="col-auto">Banana <img src="assets/images/icons/down-arrow.svg" width="16" alt=""></div>
-                    <div class="col-auto">Grapes <img src="assets/images/icons/down-arrow.svg" width="16" alt=""></div>
+            <div class="col-11 col-sm-10  py-2 mt-1 px-0 mx-0 mx-sm-3" style="overflow-x: scroll;overflow-y: visible;"
+                id="CategoryContainer">
+                <div class="row flex-nowrap justify-content-center text-green   flex-row"
+                    style="width: max-content;color: var(--Color_1);font-size: var(--fs18);">
+                    <div class="col-auto position-relative">
+                        <span>Apple</span> <img src="assets/images/icons/down-arrow.svg" width="16" alt="">
+                    </div>
+                    <div class="col-auto">Banana <img src="assets/images/icons/down-arrow.svg" width="16" alt="">
+                    </div>
+                    <div class="col-auto">Grapes <img src="assets/images/icons/down-arrow.svg" width="16" alt="">
+                    </div>
+                    <div class="col-auto">Apple <img src="assets/images/icons/down-arrow.svg" width="16" alt="">
+                    </div>
+                    <div class="col-auto">Banana <img src="assets/images/icons/down-arrow.svg" width="16" alt="">
+                    </div>
+                    <div class="col-auto">Grapes <img src="assets/images/icons/down-arrow.svg" width="16" alt="">
+                    </div>
+                    <div class="col-auto">Apple <img src="assets/images/icons/down-arrow.svg" width="16" alt="">
+                    </div>
+                    <div class="col-auto">Banana <img src="assets/images/icons/down-arrow.svg" width="16" alt="">
+                    </div>
+                    <div class="col-auto">Grapes <img src="assets/images/icons/down-arrow.svg" width="16" alt="">
+                    </div>
                     <div class="col-auto">Vanilla Js <img src="assets/images/icons/down-arrow.svg" width="16" alt="">
                     </div>
-                    <div class="col-auto">Samsung <img src="assets/images/icons/down-arrow.svg" width="16" alt=""></div>
+                    <div class="col-auto">Samsung <img src="assets/images/icons/down-arrow.svg" width="16" alt="">
+                    </div>
                     <div class="col-auto">Paradise <img src="assets/images/icons/down-arrow.svg" width="16" alt="">
                     </div>
                     <div class="col-auto">San Fransisco <img src="assets/images/icons/down-arrow.svg" width="16" alt="">
                     </div>
-                    <div class="col-auto">England <img src="assets/images/icons/down-arrow.svg" width="16" alt=""></div>
+                    <div class="col-auto">England <img src="assets/images/icons/down-arrow.svg" width="16" alt="">
+                    </div>
                 </div>
             </div>
             <!-- next Btn -->
@@ -202,144 +210,83 @@
                 }
             </script>
         </div>
-    </div>
+    </section>
 
-    <!-- Hero Secction -->
-
-    <div class="container-fluid py-5 position-relative  " >
+    <!-- Hero Section -->
+    <section class="container-fluid overflow-hidden ">
         <div class="row justify-content-center align-items-center">
-            <div class="col-12 col-md-11  col-lg-11 col-xl-10 col-xxl-9">
-                <div class="row justify-content-center align-items-center">
-                    <!-- Text -->
-                    <div class="col-12 col-sm-6">
-                        <div class="row gap-3  flex-column justify-content-center align-items-end align-items-sm-start ">
+            <!-- container -->
+            <div class="col col-md-11 col-lg-11 col-xxl-9 py-5">
+                <!-- Content -->
+                <div class="row  gap-0  gap-lg-5 position-relative  flex-row justify-content-center align-items-center">
+                    <!-- text -->
+                    <div class="col">
+                        <div class="row flex-column text-center text-xl-start ">
                             <!-- heading -->
-                            <h1 class="col  text-center text-sm-start fw-bolder display-5 text-green">Organic Food :-</h1>
-                            <h5 class="col  text-center text-sm-start  fw-bold opacity-50 mt-1 ">- Some Cool SubTitle </h5>
-                            <p class="col-11 text-end text-sm-start col-sm   fw-lighter opacity-75 mt-4   fs-5  " style=" color: #6D6D6D;">Lorem, ipsum 
-                                tenetur tempora praesentium pariatur deleniti est sequi illo magnam id? Nulla, tempora
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dolor tenetur rem illum
-                                praesentium perferendis officia architecto atque cupiditate odio dolorum, consectetur
-                                cumque quas, aperiam laborum illo dicta quia possimus.
-                                sunt? </p>
-                            <div class="col-sm-auto col  text-center text-sm-start mt-2">
-                                <div class="btn  btn-outline-success border-0    fs-3 px-1 Clickable ">Shop Now</div>
+                            <h1 class="col" style="font-size: var(--fs45);color: var(--Color_1);">Organic Food</h1>
+                            <!-- Sub Title-->
+                            <h3 class="col mt-2" style="font-size: var(--fs70);">Some Cool SubTitle</h3>
+                            <!-- paragrapg -->
+                            <p class="col" style="font-size: var(--fs18);color: var(--Color_4);">
+                                Lorem, ipsum tenetur tempora praesentium pariatur deleniti est sequi illo magnam id?
+                                Nulla, tempora Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dolor
+                                tenetur rem illum praesentium perferendis officia architecto atque cupiditate odio
+                                Lorem, ipsum tenetur tempora praesentium pariatur deleniti est sequi illo magnam id?
+                                Nulla, tempora Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dolor
+                                tenetur rem illum praesentium perferendis officia architecto atque cupiditate odio
+                            </p>
+                            <!-- Buttons -->
+                            <div class="col mt-3">
+                                <div
+                                    class="row gap-sm-0 gap-3 align-items-center justify-content-center justify-content-xl-start">
+                                    <!-- Green Button -->
+                                    <div class="col-sm-auto col">
+                                        <!-- link -->
+                                        <a href=""
+                                            class="btn  text-nowrap border border-dark  gap-1 py-2 d-flex justify-content-center align-items-center "
+                                            style="background-color: var(--Color_1);color: var(--Color_3); font-size: var(--fs20);">
+                                            <!-- icon -->
+                                            <img src="assets/images/icons/Shopping Cart.png" width="36" alt="">
+                                            <!-- text -->
+                                            <span>Shop Now</span>
+                                            &nbsp;&nbsp;
+                                        </a>
+                                    </div>
+                                    <!-- Black Button -->
+                                    <div class="col-sm-auto col">
+                                        <!-- link -->
+                                        <a href=""
+                                            class="btn text-nowrap border border-dark  gap-1 py-2 d-flex justify-content-center align-items-center "
+                                            style="font-size: var(--fs20);">
+                                            <!-- icon -->
+                                            <img src="assets/images/icons/Baskit.png" width="36" alt="">
+                                            <!-- text -->
+                                            <span>View Store</span>
+                                            &nbsp;&nbsp;
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
-
                         </div>
                     </div>
-                    <!-- for only mobile screens -->
-                    <div class="col-12 col-sm-6  d-block d-sm-none  position-absolute"
-                        style="z-index: -1; top: 10%; left: -50%;"><img src="assets/images/Hero.png"
-                            class="img-Fluid w-100"></div>
-                    <!-- for big screens -->
-                    <div class="col-12 col-sm-6 col-xl-auto col-lg-6 text-center d-none d-sm-block "><img src="assets/images/Hero.png"
-                            class="img-Fluid"></div>
+                    <!-- Relative Character -->
+                    <div class="col-auto d-none d-xl-block">
+                        <img src="assets/images/Hero.png" width="304" alt="">
+                    </div>
+                    <!-- Absolute Character -->
+                    <div class="col-auto d-block d-xl-none position-absolute "
+                        style=" right: -10%;z-index: -1; opacity: 0.7;">
+                        <img src="assets/images/Hero.png" width="304" alt="">
+                    </div>
                 </div>
-
-
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Carousel-->
-    <!-- <div class="d-flex mt-3 justify-content-center flex-column align-items-center w-100">
-        <div class="Carousel_Container">
-            <div class="Carousel">
-
-                <div class="Carousel_slide"> <img src="assets/images/Carousel/C1.jpg" class="w-100 h-100" alt=""></div>
-                <div class="Carousel_slide"> <img src="assets/images/Carousel/C2.png" class="w-100 h-100" alt=""></div>
-                <div class="Carousel_slide"> <img src="assets/images/Carousel/C3.jpg" class="w-100 h-100" alt=""></div> 
-                <div class="Carousel_slide"> <img src="assets/images/Carousel/C4.jpg" class="w-100 h-100" alt=""></div> 
-
-            </div>
-        </div>
-        <div class="container py-3">
-            <div class="d-flex gap-4 justify-content-center">
-                <span class="SlideCountBtn Clickable rounded-pill active"></span>
-                <span class="SlideCountBtn Clickable rounded-pill"></span>
-                <span class="SlideCountBtn Clickable rounded-pill"></span>
-            </div>
-        </div>
-    </div>
-    <style>
-        .Carousel_Container {
-    display: block;
-    width: var(--SlideWidth);
-    max-height: var(--SlideHeight);
-    margin-top: 10px;
-    overflow: hidden;
     
-    position: relative;
-
-} 
- 
 
 
-.Carousel {
-    display: flex;
-    width: max-content;
-    height: inherit; 
-
-    flex-wrap: nowrap;
-    flex-direction: row;
-    transition-duration: 3s;
- 
-
-}
-
-.Carousel_slide {
-    width: var(--SlideWidth);
-    max-height: var(--SlideHeight);
-    border-radius: 10px;
-    overflow: hidden;
-    /* animation: infiniteScroll 12s ease-in-out infinite alternate; */
-}
-
-@keyframes infiniteScroll {
-    0% {
-        transform: translateX(0);
-    }
-    16.66% {
-        transform: translateX(calc(var(--SlideWidth) * -1));
-    }
-    25% {
-        transform: translateX(calc(var(--SlideWidth) * -1));
-    }
-    41.66% {
-        transform: translateX(calc(var(--SlideWidth) * -2));
-    }
-    50% {
-        transform: translateX(calc(var(--SlideWidth) * -2));
-    }
-    66.66% {
-        transform: translateX(calc(var(--SlideWidth) * -3));
-    }
-    75% {
-        transform: translateX(calc(var(--SlideWidth) * -3));
-    }
-    91.66% {
-        transform: translateX(calc(var(--SlideWidth) * -4));
-    }
-    100% {
-        transform: translateX(calc(var(--SlideWidth) * -4));
-    }
-}
-.Carousel_Container button:active~.Carousel {
-    transform: translateX(calc(var(--SlideWidth) * -1));
-}
-
-.SlideCountBtn{
-    width: 3em;
-    height: 5px;
-    background-color: #0505056c;
-    transition-duration: .5s;
-}
-.SlideCountBtn.active , .SlideCountBtn:hover{
-    transform: scale(1.1);
-    background-color: #005300;
-}
-    </style> -->
+    <script src="assets/Libs/bootstrap/dist/js/bootstrap.js"></script>
 
 </body>
 

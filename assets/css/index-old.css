@@ -1,45 +1,37 @@
-@font-face {
-    font-family: Jua;
-    src: url("../fonts/Jua/Jua-Regular.ttf");
-    font-weight: 400;
+:root {
+    --SlideWidth: 95vw;
+    --SlideHeight: 500px;
 }
 
 * {
-    font-family: Jua;
+    font-family: cursive;
 }
 
-:root {
-    --Color_1: #198754;
-    --Color_2: #000000;
-    --Color_3: #ffffff;
-    --Color_4: rgb(0,0,0,0.5);
-    --fs70: 70px;
-    --fs60: 60px;
-    --fs45: 45px;
-    --fs42: 42px;
-    --fs29: 29px;
-    --fs26: 26px;
-    --fs24: 24px;
-    --fs20: 20px;
-    --fs18: 18px;
-    --fs15: 15px;
+.bg-lightGreen {
+    background: linear-gradient(to top, #d3e8d6, #8faf92);
 }
 
-.form-control:focus {
-    outline: 0;
-    box-shadow: none;
+.bg-grey {
+    background-color: rgba(0, 0, 0, 0.363);
 }
 
+.text-green {
+    color: #005300;
+}
 
-.SearchBar {
-    
-    height: inherit;
-    flex-grow: 1;   
-    border: 0;
-} 
+.HoverEffect-1 {
+    transition-duration: .3s;
+}
+
+.HoverEffect-1:hover {
+
+    border-bottom: 1px solid green;
+
+}
+
 input:focus {
     outline: none;
-} 
+}
 
 #Suggessions {
     display: none;
@@ -63,8 +55,6 @@ input:focus {
     font-size: 24px;
     font-weight: bold;
 }
-
-
 
 #CategoryContainer::-webkit-scrollbar {
     /* display: none; */
@@ -99,3 +89,5 @@ input:focus {
 .Clickable:active {
     cursor: default;
 }
+
+ 
