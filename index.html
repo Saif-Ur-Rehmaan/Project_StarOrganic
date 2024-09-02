@@ -714,35 +714,31 @@
                 </div>
             </div>
         </div>
-        <script>
-            const accordian_div = document.getElementsByClassName(" accordian_div"); for (let i = 0; i <
-                accordian_div.length; i++) {
-                    const
-                    AD = accordian_div[i];
-                AD.addEventListener("click", () => {
-                    const sibilngAnsDiv = AD.nextElementSibling;
-                    const display = sibilngAnsDiv.style.display;
+        
+    </div>
+    <!-- Footer -->
+    
 
-                    sibilngAnsDiv.classList.contains("d-none") ?
-                        sibilngAnsDiv.classList.remove("d-none") :
-                        sibilngAnsDiv.classList.add("d-none");
+    <script src=" assets/Libs/bootstrap/dist/js/bootstrap.js">
+    </script>
+                                                                        <script>
+                                                                            const accordian_div = document.getElementsByClassName(" accordian_div");
+                                                                            for (let i = 0; i < accordian_div.length; i++) {
+                                                                                const AD = accordian_div[i];
+                                                                                AD.addEventListener("click", () => {
+                                                                                    const sibilngAnsDiv = AD.nextElementSibling;
+                                                                                    const display = sibilngAnsDiv.style.display;
+
+                                                                                    sibilngAnsDiv.classList.contains("d-none") ?
+                                                                                        sibilngAnsDiv.classList.remove("d-none") :
+                                                                                        sibilngAnsDiv.classList.add("d-none");
 
 
-                    console.log(sibilngAnsDiv);
+                                                                                    console.log(sibilngAnsDiv);
 
-                })
-            }
-        </script>
-                                                                    </div>
-
-                                                                    <!-- Footer -->
-                                                                    <footer>
-
-                                                                    </footer>
-
-                                                                    <script
-                                                                        src="assets/Libs/bootstrap/dist/js/bootstrap.js"></script>
-
+                                                                                })
+                                                                            }
+                                                                        </script>
 </body>
 
 </html>
