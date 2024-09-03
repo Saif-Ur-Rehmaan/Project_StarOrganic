@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products </title>
+    <link rel="shortcut icon" href="assets/images/FavIcon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/Libs/bootstrap/dist/css/bootstrap.css">
+
+    <link rel="stylesheet" href="assets/css/universal.css">
+    <link rel="stylesheet" href="assets/css/nav.css">
+
+    <link rel="stylesheet" href="assets/css/products.css">
+
+
+</head>
+
+<body>
+
+
+    <!-- nav -->
+    <header>
+        <!-- nav -->
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <!-- container -->
+                <div class="col-10 border-bottom p-0">
+                    <!-- nav -->
+                    <div
+                        class="row w-100 flex-row justify-content-between justify-content-xl-center align-items-center gap-xl-3 gap-0 py-3">
+                        <!-- Logo -->
+                        <div class="col-auto">
+                            <span style="font-size: var(--fs42);color: var(--Color_1);">Star</span><span
+                                style="font-size: var(--fs29);">Organic</span>
+                        </div>
+                        <!-- Search Bar -->
+                        <div class="col d-none d-lg-block  border border-1 shadow  bg-light rounded-pill">
+                            <div class="row position-relative h-100 align-items-center gap-1 px-2 py-1">
+                                <!-- logo -->
+                                <div class="col-auto ">
+                                    <img src="assets/images/icons/Magnifiyer.svg" class="img-fluid" alt="">
+                                </div>
+                                <!-- Search Bar  -->
+                                <div class="col p-0">
+                                    <input type="text" autocomplete="off"
+                                        class="w-100 h-100 bg-transparent border-0 py-1" id="SearchBar"
+                                        placeholder="Search..." name="">
+                                </div>
+                                <div class="col-auto h-100" id="CancelButton" style="display: none;cursor: pointer;">X
+                                </div>
+                                <ul class="col-12 list-unstyled py-2  bg-light position-absolute rounded-3 shadow p-0 overflow-hidden mt-2"
+                                    id="Suggessions" style="z-index: 5;">
+                                    <li class="d-flex gap-2  opacity-75 py-2 px-3 fw-bolder suggession">
+                                        <img src="assets/images/icons/Magnifiyer.svg" alt="">
+                                        <span>pineapple</span>
+                                    </li>
+                                    <li class="d-flex gap-2  opacity-75 py-2 px-3 fw-bolder suggession">
+                                        <img src="assets/images/icons/Magnifiyer.svg" alt="">
+                                        <span>apple</span>
+                                    </li>
+                                    <li class="d-flex gap-2  opacity-75 py-2 px-3 fw-bolder suggession">
+                                        <img src="assets/images/icons/Magnifiyer.svg" alt="">
+                                        <span>grapes</span>
+                                    </li>
+                                    <li class="d-flex gap-2  opacity-75 py-2 px-3 fw-bolder suggession">
+                                        <img src="assets/images/icons/Magnifiyer.svg" alt="">
+                                        <span>Skin Care</span>
+                                    </li>
+                                    <li class="d-flex gap-2  opacity-75 py-2 px-3 fw-bolder suggession">
+                                        <img src="assets/images/icons/Magnifiyer.svg" alt="">
+                                        <span>Banana</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- searchbar script -->
+                            <script>
+                                const SearchBar = document.getElementById("SearchBar");
+                                const Suggessions = document.getElementById("Suggessions");
+                                const CancelButton = document.getElementById("CancelButton");
+
+                                SearchBar.addEventListener("focus", () => {
+                                    Suggessions.style.display = "block";
+                                })
+                                SearchBar.addEventListener("focusout", () => {
+                                    Suggessions.style.display = "none";
+                                })
+                                SearchBar.addEventListener("input", () => {
+                                    if (SearchBar.value == "") {
+                                        CancelButton.style.display = "none"
+                                    } else {
+                                        CancelButton.style.display = "block"
+
+                                    }
+                                })
+                                CancelButton.addEventListener("click", () => {
+                                    SearchBar.value = "";
+                                    CancelButton.style.display = "none";
+                                })
+                            </script>
+
+                        </div>
+
+                        <!-- Sign in / Sign up -->
+                        <div class="col-auto d-none d-lg-block ">
+                            <span><a href="" style="all: unset; font-size: var(--fs24); color: var(--Color_1); ">Sign
+                                    in</a></span>
+                            <span><a href="" style="all: unset; font-size: var(--fs24);">|| Sign up</a></span>
+                        </div>
+                        <!-- Hamburger -->
+                        <div class="col-auto p-0 Clickable" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                            <img src="assets/images/icons/hamburger.svg" width="48" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- sidenav -->
+
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+            aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Star Organics</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="list-group ">
+                    <li class="list-group-item border-0 text-center"><a href="/index.html" class="text-center">Home</a>
+                    </li>
+                    <li class="list-group-item border-0 text-center"><a href="/Products.html"
+                            class="text-center">Products</a></li>
+                    <li class="list-group-item border-0 text-center"><a href="/ContactUs.html"
+                            class="text-center">Contact Us</a></li>
+                    <li class="list-group-item border-0 text-center"><a href="/SignIn.html" class="text-center">Sign
+                            in</a></li>
+                    <li class="list-group-item border-0 text-center"><a href="/Signup.html" class="text-center">Sign
+                            up</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- banner -->
+    <div class="d-none position-relative container-fluid p-0 overflow-hidden">
+        <img src="assets/images/Banner.png" alt="">
+        <div class="row position-absolute h-100 w-100 justify-content-center align-items-center"
+            style="z-index: 2;top: 0;">
+            <div class="col-auto text-light text-center py-5 px-"
+                style="background-color: rgba(255, 255, 255, 0.25);border-top-right-radius:40px ; border-bottom-left-radius: 40px;">
+                <div class="row flex-column justify-content-center px-5 align-items-center h-100">
+                    <!-- heading -->
+                    <h1 class="col-12 p-0 m-0 " >Organic Products Shop</h1>
+                    <!-- subtitle -->
+                    <h4 class="col-12 " >some text here</h4>
+                    <!-- green button -->
+                    <div class="col-sm-6 col">
+                        <!-- link -->
+                        <a href=""
+                            class="btn  text-nowrap   gap-1 py-2 d-flex justify-content-center align-items-center "
+                            style="background-color: var(--Color_1);color: var(--Color_3); font-size: var(--fs20);">
+                            <span>See Products</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Products -->
+    <section class="d-none container-fluid my-5 overflow-hidden">
+        <div class="row justify-content-center">
+            <!-- container -->
+            <div class="col-12">
+                <div class="row flex-column justify-content-center align-items-center gap-5">
+                    <!-- heading -->
+                    <div class="col-12 border-bottom border-dark border-1">
+                        <div class="row flex-nowrap justify-content-between align-items-center">
+                            <!-- text -->
+                            <div class="col-auto " style="font-size: var(--fs45);">Edible Products</div>
+                            <!-- link -->
+                            <a class="col-auto text-decoration-underline align-self-end"
+                                style="color: var(--Color_1);font-size: var(--fs24);">
+                                See All
+                            </a>
+                        </div>
+                    </div>
+                    <!-- All cards -->
+                    <div class="col-12">
+                        <div class="row justify-content-center align-items-center ">
+                            <!-- card -->
+                            <div class="col-12 cardShadow ProdCard px-3"  >
+                                <div class="row flex-column   align-items-center " style="min-height: 400px;">
+                                    <!-- img -->
+                                    <div class="col-auto my-5"><img src="assets/images/prodcts/apple.png" class="rounded-circle text-center" width="133" height="133" alt=""></div>
+                                    <!-- heading -->
+                                    <div class="col-12 mb-2" style="font-size: var(--fs20);">Apple Syrup</div>
+                                    <!-- text -->
+                                    <div class="col-12 mb-3 opacity-50" style="font-size: 16px;">Apple Syrup is a very good product for external use and many more ...</div>
+                                    <!-- buttons -->
+                                    <div class="col-12">
+                                        <div class="row flex-nowrap justify-content-center align-items-center">
+                                            <!-- green button -->
+                                            <div class="col">
+                                                <!-- link -->
+                                                <a href=""
+                                                    class="btn  text-nowrap   gap-1 py-2 d-flex justify-content-center align-items-center "
+                                                    style="background-color: var(--Color_1);color: var(--Color_3); font-size: var(--fs20);">
+                                                    <span style="font-size: var(--fs18);">Buy Now</span>
+                                                </a>
+                                            </div>
+                                            <!-- normal button -->
+                                            <div class="col">
+                                                <!-- link -->
+                                                <a href=""
+                                                    class="btn btn-outline-dark  text-nowrap   gap-1 py-2 d-flex justify-content-center align-items-center "
+                                                    style=" font-size: var(--fs20);">
+                                                    <span>Add To Cart</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </section>
+
+
+    <footer class=" container-fluid" style="background-color: var(--Color_1);">
+        <div class="row justify-content-center align-items-center">
+            <!-- container -->
+            <div class="col-10 py-5 my-3 ">
+                <div class="row align-items-center justify-content-center">
+                    <!-- content -->
+                    <div class="col-sm-6 col text-light">
+                        <!-- heading -->
+                        <h1 style="font-size: var(--fs70);">
+                            Star Organic </h1>
+                        <!-- paragraph -->
+                        <ul class="list-unstyled d-flex gap-3">
+                            <li><img src="assets/images/icons/Instagram.png" alt=""></li>
+                            <li><img src="assets/images/icons/Facebook.png" alt=""></li>
+                            <li><img src="assets/images/icons/LinkedIn.png" alt=""></li>
+                            <li><img src="assets/images/icons/GitHub.png" alt=""></li>
+                        </ul>
+                        <!-- paragraph -->
+                        <p class="opacity-50" style="font-size: var(--fs18);">
+                            Lorem, ipsum tenetur tempora
+                            praesentium pariatur
+                            deleniti est sequi illo
+                            magnam id? Nulla, tempora
+                            Lorem ipsum dolor sit amet
+                            consectetur adipisicing
+                            elit. Odit dolor , ipsum
+                            tenetur tempora praesentium
+                            pariatur deleniti est sequi
+                            illo magnam id? Nulla,
+                            tempora Lorem ipsum dolor
+                            sit amet consectetur
+                            adipisicing elit. Odit dolor
+                        </p>
+                    </div>
+                    <!-- images -->
+                    <div class="col-4 d-none d-sm-block">
+                        <img src="assets/images/FooterOrganics.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <script src=" assets/Libs/bootstrap/dist/js/bootstrap.js">
+    </script>
+
+</body>
+
+</html>

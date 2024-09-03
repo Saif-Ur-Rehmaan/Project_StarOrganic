@@ -1,0 +1,39 @@
+.form-control:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+
+.SearchBar {
+    
+    height: inherit;
+    flex-grow: 1;   
+    border: 0;
+} 
+input:focus {
+    outline: none;
+} 
+
+#Suggessions {
+    display: none;
+    left: 0;
+    top: 110%;
+}
+
+.suggession {
+    transition-duration: 0.3s;
+    text-transform: capitalize;
+}
+
+.suggession:hover {
+    opacity: 1 !important;
+    background-color: rgba(73, 72, 72, 0.103);
+    cursor: pointer;
+}
+
+.LogoText {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+

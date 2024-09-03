@@ -1,0 +1,53 @@
+@font-face {
+    font-family: Jua;
+    src: url("../fonts/Jua/Jua-Regular.ttf");
+    font-weight: 400;
+}
+
+* {
+    font-family: Jua;
+}
+
+:root {
+    --Color_1: #198754;
+    --Color_2: #000000;
+    --Color_3: #ffffff;
+    --Color_4: rgba(0, 0, 0, 0.5);
+    /* Note: Corrected to use rgba() */
+    --fs70: 4.375rem;
+    /* 70px / 16 = 4.375rem */
+    --fs60: 3.75rem;
+    /* 60px / 16 = 3.75rem */
+    --fs45: 2.8125rem;
+    /* 45px / 16 = 2.8125rem */
+    --fs42: 2.625rem;
+    /* 42px / 16 = 2.625rem */
+    --fs29: 1.8125rem;
+    /* 29px / 16 = 1.8125rem */
+    --fs26: 1.625rem;
+    /* 26px / 16 = 1.625rem */
+    --fs24: 1.5rem;
+    /* 24px / 16 = 1.5rem */
+    --fs20: 1.25rem;
+    /* 20px / 16 = 1.25rem */
+    --fs18: 1.125rem;
+    /* 18px / 16 = 1.125rem */
+    --fs15: 0.9375rem;
+    /* 15px / 16 = 0.9375rem */
+    --bs-breakpoint-xs: 0;
+    --bs-breakpoint-sm: 576px;
+    --bs-breakpoint-md: 768px;
+    --bs-breakpoint-lg: 992px;
+    --bs-breakpoint-xl: 1200px;
+    --bs-breakpoint-xxl: 1400px;
+}
+
+
+.Clickable {
+    cursor: pointer;
+    transition-duration: 0.1s;
+}
+
+.Clickable:active {
+    cursor: default;
+}
